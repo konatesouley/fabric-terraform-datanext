@@ -1,33 +1,3 @@
-Terraform Workspaces (SÉPARATION DES STATES)
-
-👉 OBLIGATOIRE en entreprise
-
-terraform init
-
-Créer les workspaces
-```
-terraform workspace new dev
-terraform workspace new qa
-terraform workspace new prod
-```
-
-6️⃣ Déploiement DEV / QA / PROD (ULTRA SIMPLE)
-```
-DEV
-terraform workspace select dev
-terraform apply -var-file=env/dev.tfvars
-```
-```
-QA
-terraform workspace select qa
-terraform apply -var-file=env/qa.tfvars
-```
-```
-PROD
-terraform workspace select prod
-terraform apply -var-file=env/prod.tfvars
-```
-
 # Terraform Workspaces (séparation des states)
 
 Les **workspaces Terraform** permettent de gérer plusieurs environnements (par exemple `dev`, `qa`, `prod`) à partir du même code, tout en **séparant les fichiers de state**.  
@@ -64,14 +34,14 @@ terraform apply -var-file=env/dev.tfvars
 ```
 ## 3. Déploiement par environnement QA
 ```bash
-terraform workspace select dev
+terraform workspace select qa
 terraform apply -var-file=env/qa.tfvars
 
 ```
 
 ## 3. Déploiement par environnement PROD
 ```bash
-terraform workspace select dev
+terraform workspace select prod
 terraform apply -var-file=env/prod.tfvars
 
 ```
