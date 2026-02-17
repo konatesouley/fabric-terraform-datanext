@@ -1,0 +1,4 @@
+environment = "prod"
+
+fabric_capacity_id          = "your-capacity-id-here"
+service_principal_object_id = "your-sp-object-id-here"
