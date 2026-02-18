@@ -10,9 +10,10 @@ locals {
     disable_schema = false
   }
   lakehouses = {
-    bronze = "bronze"
-    silver = "silver"
+    bronze = "Lakehouse_bronze"
+    silver = "lake_silver"
+    gold = "lakehouse_gold"
   }
 
-  warehouse = "gold"
+  warehouse = "warehouse_gold"
 }
