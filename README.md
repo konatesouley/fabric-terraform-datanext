@@ -29,12 +29,14 @@ terraform workspace new prod
 DEV
 ```bash
 terraform workspace select dev
+terraform plan -var-file="env/dev.tfvars"
 terraform apply -var-file="env/dev.tfvars"
 
 ```
 ## 3. Déploiement par environnement QA
 ```bash
 terraform workspace select qa
+terraform plan -var-file="env/qa.tfvars"
 terraform apply -var-file="env/qa.tfvars"
 
 ```
@@ -42,6 +44,7 @@ terraform apply -var-file="env/qa.tfvars"
 ## 3. Déploiement par environnement PROD
 ```bash
 terraform workspace select prod
+terraform plan -var-file="env/prod.tfvars"
 terraform apply -var-file="env/prod.tfvars"
 
 ```
