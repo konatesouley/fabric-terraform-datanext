@@ -11,8 +11,8 @@ terraform {
       version = "~> 2.47"
     }
     fabric = {
-    #   source  = "microsoft/fabric"
-    #   version = "~> 1.6.0"
+      #   source  = "microsoft/fabric"
+      #   version = "~> 1.6.0"
       source  = "microsoft/fabric"
       version = ">= 1.6.0"
     }
@@ -25,7 +25,7 @@ provider "azurerm" {
 }
 
 provider "azuread" {
-    
+
 }
 
 # Configuration du provider Fabric
